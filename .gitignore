@@ -1,5 +1,6 @@
 docs/
-test/
+tests/
 dist/
 build/
 *.json
+__pycache__/

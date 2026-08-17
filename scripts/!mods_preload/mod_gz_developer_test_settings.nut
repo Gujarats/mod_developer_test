@@ -10,12 +10,12 @@ if (!("DeveloperTest" in getroottable()))
     local progression = ::DeveloperTest.Mod.ModSettings.addPage("Progression");
 
     general.addBooleanSetting("EnableDeveloperTestMode", false, "Enable Developer Test Mode", "Enables the explicit test buttons. Use only on a disposable save.");
-    local debug = general.addBooleanSetting("DebugLogging", true, "Debug Logging", "Write Global Developer Test results to log.html.");
+    local debug = general.addBooleanSetting("EnableAllOwnedModDebugLogs", true, "Enable All My Mod Debug Logs", "Override debug logging for all installed guzBluez gameplay mods.");
     debug.addCallback(function(_enabled = true)
     {
-        ::DeveloperTest.Mod.Debug.setFlag("default", _enabled);
+        ::GuzBluezDebugLogController.setEnabled(_enabled);
     });
-    ::DeveloperTest.Mod.Debug.setFlag("default", debug.getValue());
+    ::GuzBluezDebugLogController.setEnabled(debug.getValue());
 
     kits.addRangeSetting("KitCopies", 1, 1, 10, 1, "Kit Copies", "Copies of each item granted by an explicit test-kit action.");
     kits.addButtonSetting("GrantAuraRouting", null, "Grant Aura Routing", "Explicit action: grants Aura Routing to current player brothers when Aura Routing is installed.").addCallback(function(_data = null) { ::DeveloperTest.Adapters.grantAuraRouting(); });

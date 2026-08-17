@@ -7,6 +7,8 @@
 ::DeveloperTest.HookMod <- ::Hooks.register(::DeveloperTest.ID, ::DeveloperTest.Version, ::DeveloperTest.Name);
 ::DeveloperTest.HookMod.require("mod_msu >= 1.9.0");
 
+::include("scripts/mods/developer_test/log_controller");
+
 ::DeveloperTest.HookMod.queue(">mod_msu", function()
 {
     ::DeveloperTest.Mod <- ::MSU.Class.Mod(::DeveloperTest.ID, ::DeveloperTest.Version, ::DeveloperTest.Name);
