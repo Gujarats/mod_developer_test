@@ -15,7 +15,9 @@ if (!("DeveloperTest" in getroottable()))
             || _id == "mod_potion_helper"
             || _id == "mod_potion_resurrection"
             || _id == "mod_dismissal_enhanced"
-            || _id == "mod_level_max";
+            || _id == "mod_level_max"
+            || _id == "mod_mentor_rookie"
+            || _id == "mod_alternate_difficulties";
     }
 
     function getEnabled()
