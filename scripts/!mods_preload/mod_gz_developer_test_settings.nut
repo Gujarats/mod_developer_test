@@ -11,7 +11,7 @@ if (!("DeveloperTest" in getroottable()))
 
     general.addBooleanSetting("EnableDeveloperTestMode", false, "Enable Developer Test Mode", "Enables the explicit test buttons. Use only on a disposable save.");
     local debug = general.addBooleanSetting("EnableAllOwnedModDebugLogs", true, "Enable All My Mod Debug Logs", "Override debug logging for all installed guzBluez gameplay mods.");
-    debug.addCallback(function(_enabled = true)
+    debug.addCallback(function(_enabled = false)
     {
         ::GuzBluezDebugLogController.setEnabled(_enabled);
     });
